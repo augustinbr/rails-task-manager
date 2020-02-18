@@ -1,0 +1,15 @@
+
+<button type="button" class="edit-btn"><%= link_to "Edit Task", edit_path(@task) %></button>
+
+<h1><%= @task['title'] %></h1>
+
+<div class="content border-bottom-0" >
+  <p class="details"><%= @task['details'] %></p>
+
+  <p><%= check_box("p", @task['id'], {checked: @task['completed'] == true}) %>
+  This task is completed</p>
+   <%= link_to "Back to list", tasks_path %>
+</div>
+
+
+
